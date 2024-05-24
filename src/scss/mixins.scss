@@ -1,0 +1,43 @@
+@import 'vuetify';
+
+@mixin xs {
+  @media #{map-get($display-breakpoints, 'xs')} {
+    @content;
+  }
+}
+
+@mixin sm-and-down {
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    @content;
+  }
+}
+
+@mixin sm-and-up {
+  @media #{map-get($display-breakpoints, 'sm-and-up')} {
+    @content;
+  }
+}
+
+@mixin md-and-down {
+  @media #{map-get($display-breakpoints, 'md-and-down')} {
+    @content;
+  }
+}
+
+@mixin md-and-up {
+  @media #{map-get($display-breakpoints, 'md-and-up')} {
+    @content;
+  }
+}
+
+@mixin lg-and-down {
+  @media #{map-get($display-breakpoints, 'lg-and-down')} {
+    @content;
+  }
+}
+
+@mixin lg-and-up {
+  @media #{map-get($display-breakpoints, 'lg-and-up')} {
+    @content;
+  }
+}

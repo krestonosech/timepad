@@ -1,0 +1,238 @@
+.s-form-control {
+  &.v-text-field {
+    flex-grow: 0;
+  }
+
+  &.v-text-field--filled {
+    &.theme--light {
+      &.v-input--is-focused {
+        > {
+          .v-input__control {
+            .v-field {
+              background: $bg-third;
+              border: 1px solid $state-focused;
+
+              &:hover {
+                background: $bg-third !important;
+              }
+            }
+          }
+        }
+      }
+
+      > {
+        .v-input__control {
+          .v-field {
+            min-height: 43px;
+            border: 1px solid transparent;
+            background: $bg-main;
+
+            &:hover {
+              background: #efefef !important;
+
+              .v-label {
+                color: $text-body;
+              }
+            }
+
+            .v-label {
+              font-size: 13px;
+              color: $text-placeholder;
+              top: calc(50% - 10px);
+
+              &.primary--text {
+                color: $text-placeholder !important;
+              }
+
+              &.error--text {
+                color: $text-body !important;
+              }
+            }
+
+            .v-input {
+              &__append-inner {
+                margin-top: 12px;
+              }
+
+              &__icon {
+                height: 18px;
+                width: 18px;
+                min-width: 18px;
+              }
+
+              &__prepend-inner {
+                margin-top: 11px;
+
+                .v-input__icon {
+                  width: 24px;
+                  height: 24px;
+                  min-width: 24px;
+                }
+              }
+            }
+
+            .v-icon {
+              &.error--text {
+                color: $text-body !important;
+              }
+
+              &__svg {
+                width: 18px;
+                height: 18px;
+                color: $text-body;
+              }
+            }
+          }
+
+          .v-text-field__details {
+            padding-left: 24px;
+          }
+        }
+      }
+
+      &.s-form-control--inverted {
+        > {
+          .v-input__control {
+            .v-field {
+              background: $bg-third;
+
+              &:hover {
+                background: #fdfdfd !important;
+              }
+            }
+          }
+        }
+      }
+
+      &.v-select--is-menu-active {
+        .v-input {
+          &__slot {
+            border: 1px solid $state-focused;
+            background-color: $bg-third;
+
+            &:hover {
+              background-color: $bg-third !important;
+            }
+          }
+        }
+      }
+
+      &.error--text {
+        .v-input {
+          &__slot {
+            border: 1px solid $notification-error;
+          }
+        }
+      }
+
+      &.v-input--is-disabled {
+        .v-input__control {
+          .v-field {
+            .v-input {
+              &__prepend-inner,
+              &__append-inner {
+                svg {
+                  color: $state-disabled;
+                }
+              }
+            }
+          }
+        }
+        .v-label {
+          &.v-label--is-disabled {
+            color: $state-disabled;
+          }
+        }
+      }
+    }
+
+    &:not(.v-text-field--single-line) {
+      input {
+        margin-top: 11px;
+      }
+    }
+  }
+
+  .v-messages {
+    &__message {
+      font-size: 11px;
+      line-height: 11px;
+      color: $notification-error;
+    }
+  }
+
+  &--no-details {
+    &.v-text-field {
+      &--enclosed {
+        // margin-bottom: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    .v-text-field__details {
+      display: none;
+    }
+  }
+
+  &.v-select {
+    &.v-text-field--enclosed {
+      &:not(.v-text-field--single-line) {
+        .v-select__selections {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .v-select {
+      &__selection {
+        &--comma {
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+
+  .v-field__outline {
+    display: none;
+  }
+}
+
+.v-menu__content {
+  border-radius: 20px;
+  box-shadow: unset;
+  filter: drop-shadow(0px 8px 12px rgba(77, 77, 77, 0.07))
+    drop-shadow(0px 0px 6px rgba(77, 77, 77, 0.07));
+
+  &.v-autocomplete__content {
+    border-radius: 20px;
+    box-shadow: unset;
+    filter: drop-shadow(0px 8px 12px rgba(77, 77, 77, 0.07))
+      drop-shadow(0px 0px 6px rgba(77, 77, 77, 0.07));
+
+    .v-list-item {
+      color: $text-body;
+
+      &:hover {
+        background-color: $state-hover;
+
+        .v-list-item__content {
+          color: $text-body;
+        }
+      }
+
+      &--link {
+        &:before {
+          content: unset;
+        }
+      }
+
+      &__content {
+        padding: 15px 0;
+      }
+
+      &__title {
+        color: $text-body;
+      }
+    }
+  }
+}

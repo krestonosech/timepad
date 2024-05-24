@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import './components/tooltip';
+
+html {
+  overflow: unset !important;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.v-main {
+  flex-shrink: 1 !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.s-menu__item-content {
+  display: inline-flex;
+}
+
+.s-menu__item-title {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,52 @@
+$main-text: #92278f;
+$main-second: #d0d0d0;
+$text-headers: #2b2b2b;
+$text-body: #4d4d4d;
+$text-placeholder: #9e9da1;
+$text-bold-900: #131d2d;
+$gradient-button: linear-gradient(290.48deg, #92278f 0%, #c6168d 58.33%, #ed1c24 100%);
+$bg-main: #f5f5f5;
+$bg-second: #012345;
+$bg-third: #ffffff;
+$state-hover: #f9f9f9;
+$state-focused: #c6168d;
+$state-disabled: #cbcbcb;
+$notification-error: #ff636f;
+$notification-success: #36f6b1;
+$flat-free: #25d494;
+$flat-booking: #ffc332;
+$flat-registration: #2567d4;
+$flat-not-for-sale: #e7e7e7;
+$flat-sold: #bdbdbd;
+
+$colors: (
+  'main-text': $main-text,
+  'main-second': $main-second,
+  'text-headers': $text-headers,
+  'text-body': $text-body,
+  'text-placeholder': $text-placeholder,
+  'text-bold-900': $text-bold-900,
+  'bg-main': $bg-main,
+  'bg-second': $bg-second,
+  'bg-third': $bg-third,
+  'state-hover': $state-hover,
+  'state-focused': $state-focused,
+  'state-disabled': $state-disabled,
+  'notification-error': $notification-error,
+  'notification-success': $notification-success,
+  'flat-free': $flat-free,
+  'flat-booking': $flat-booking,
+  'flat-registration': $flat-registration,
+  'flat-not-for-sale': $flat-not-for-sale,
+  'flat-sold': $flat-sold,
+);
+
+@each $name, $value in $colors {
+  .color-#{$name} {
+    color: $value;
+  }
+
+  .bg-#{$name} {
+    background-color: $value;
+  }
+}
